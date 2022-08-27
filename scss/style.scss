@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+%card {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+%headingXL {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+}
+
+%bodyL {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+
+$white: #FFFFFF;
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    .gradient--desktop {
+        display: block;
+    }
+    .gradient--mobile {
+        display: none;
+    }
+}
+
+.context {
+    margin: auto;
+}
+
+.cards__card {
+    position: relative;
+    max-width: 447px;
+    height: auto;
+    color: $white;
+    .cards__card--front {
+        @extend %card;
+    }
+    .cards__card--back {
+        @extend %card;
+    }
+    .cards__card--number {
+        position: absolute;
+        top: 139px;
+        left: 32px;
+        @extend %headingXL;
+    }
+    .cards__card--name {
+        @extend %bodyL;
+    }
+    .cards__card--date {
+        @extend %bodyL;
+    }
+
+}
