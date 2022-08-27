@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-%card {
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
 %headingXL {
     font-size: 28px;
     font-weight: 500;
     line-height: 36px;
+    text-align: left;
+    letter-spacing: 3.422222137451172px;
+}
+
+%headingL {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0px;
     text-align: left;
 }
 
@@ -21,8 +25,20 @@
     text-align: left;
 }
 
+%bodyM {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+
 
 $white: #FFFFFF;
+$lightGrey: #DFDEE0;
+$deepViolet: #21092F;
+
 
 body {
     font-family: 'Space Grotesk', sans-serif;
@@ -44,31 +60,81 @@ body {
 }
 
 .context {
-    margin: auto;
+    margin: 186px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cards__card {
     position: relative;
-    max-width: 447px;
-    height: auto;
+    width: 447px;
+    height: 245px;
     color: $white;
-    .cards__card--front {
-        @extend %card;
-    }
-    .cards__card--back {
-        @extend %card;
-    }
-    .cards__card--number {
+    background: url(/images/bg-card-front.png) no-repeat;
+        
+    .cards__card--information {
         position: absolute;
-        top: 139px;
-        left: 32px;
-        @extend %headingXL;
+        bottom: 0;
+        margin: auto 32px 27px 32px;
+        max-width: 100%;
+        .cards__card--number {
+            @extend %headingXL;
+        }
+        .cards__card--name {
+            @extend %bodyL;
+            text-transform: uppercase;
+            margin-top: 26px;
+            width: fit-content;
+        }
+        .cards__card--date {
+            @extend %bodyL;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
-    .cards__card--name {
-        @extend %bodyL;
-    }
-    .cards__card--date {
-        @extend %bodyL;
+}
+
+form {
+    display: block;
+    max-width: 381px;
+
+    label {
+        text-transform: uppercase;
+        @extend %bodyM;
     }
 
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 45px;
+        border-radius: 8px;
+        border: 1px solid $lightGrey;
+        color: $deepViolet;
+        padding: 11px 16px;
+        margin-top: 9px;
+        margin-bottom: 26px;
+        @extend %headingL;
+
+        &::placeholder {
+            opacity: 0.25;
+        }
+    }
+
+    .form--date {
+        input {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80px;
+            margin-bottom: 0;
+        }
+    }
+
+    .form--cvc {
+        input {
+            width: 191px;
+        }
+    }
 }
