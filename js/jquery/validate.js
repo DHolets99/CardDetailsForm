@@ -11,10 +11,10 @@ const checkEmptyFields = (event) => {
         e.nextElementSibling.innerHTML = "Can’t be blank";
 
         if (e.value == '') {
-            e.style.border = '1px solid #FF5050';
+            e.classList.add('error');
             message.style.display = "block";
         } else {
-            e.style.border = '1px solid #DFDEE0';
+            e.classList.remove('error');
             message.style.display = "none";
         };
     })

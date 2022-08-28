@@ -153,6 +153,12 @@ body {
 .form fieldset input::placeholder {
   opacity: 0.25;
 }
+.form fieldset .error {
+  border: 1px solid #FF5050;
+}
+.form fieldset .error:hover {
+  border: 1px solid #6348FE;
+}
 .form fieldset p {
   margin-top: 8px;
   display: none;
