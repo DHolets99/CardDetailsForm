@@ -33,11 +33,20 @@
     text-align: left;
 }
 
+%bodyS {
+    font-family: Space Grotesk;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #FF5050;
+}
+
 
 $white: #FFFFFF;
 $lightGrey: #DFDEE0;
 $deepViolet: #21092F;
-
 
 body {
     font-family: 'Space Grotesk', sans-serif;
@@ -65,6 +74,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 30px;
 }
 
 .cards {
@@ -78,6 +88,10 @@ body {
         width: 100%;
         color: $white;
         position: relative;
+
+        img {
+            width: 100%;
+        }
             
         .cards__card--information {
             position: absolute;
@@ -103,16 +117,20 @@ body {
     }
 
     .front {
-        background: url(/images/bg-card-front.png) no-repeat;
         position: absolute;
         top: 0;
         left: 0;
     }
     .back {
-        background: url(/images/bg-card-back.png) no-repeat;
         position: absolute;
         bottom: 0;
         left: 94px;
+        p {
+            @extend %bodyL;
+            position: absolute;
+            top: 45%;
+            right: 12%;
+        }
     }
 }
 
@@ -122,43 +140,61 @@ body {
     width: 381px;
     margin-left: 127px;
 
-    label {
-        width: 100%;
-        text-transform: uppercase;
-        @extend %bodyM;
-    }
-
-    input {
-        box-sizing: border-box;
-        width: 100%;
-        height: 45px;
-        border-radius: 8px;
-        border: 1px solid $lightGrey;
-        color: $deepViolet;
-        padding: 11px 16px;
-        margin-top: 9px;
-        margin-bottom: 26px;
-        @extend %headingL;
-
-        &::placeholder {
-            opacity: 0.25;
-        }
-    }
-
     fieldset {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 40px;
-        input {
-            width: 80px;
-            margin-bottom: 0;
+        margin-bottom: 26px;
+
+        label {
+            width: 100%;
+            text-transform: uppercase;
+            @extend %bodyM;
         }
-        .form--cvc {
-            input {
-                width: 191px;
+    
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            height: 45px;
+            padding: 11px 16px;
+            color: $deepViolet;
+            margin-top: 9px;
+            @extend %headingL;
+            cursor: pointer;
+    
+            border: 1px solid $lightGrey;
+            border-radius: 8px;
+            
+            &:hover {
+                border: 1px solid #6348FE;
+            }
+    
+            &::placeholder {
+                opacity: 0.25;
             }
         }
+
+        p {
+            @extend %bodyS;
+            margin-top: 8px;
+            display: none;
+        }
+    }
+
+    .form__lowerstr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .form__date {
+        max-width: 50%;
+        display: inline-block;
+        input {
+            width: 45%;
+        }
+    }
+
+    .form__cvc {
+        max-width: 50%;
     }
 
     button {
