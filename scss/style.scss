@@ -47,6 +47,7 @@
 $white: #FFFFFF;
 $lightGrey: #DFDEE0;
 $deepViolet: #21092F;
+$red: #FF5050;
 
 body {
     font-family: 'Space Grotesk', sans-serif;
@@ -183,19 +184,22 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
+        margin-bottom: 16px;
 
-    .form__date {
-        max-width: 50%;
-        display: inline-block;
-        input {
-            width: 45%;
+        .form__date {
+            max-width: 50%;
+            display: inline-block;
+            input {
+                width: 45%;
+            }
         }
+
+        .form__cvc {
+            max-width: 50%;
+        }
+
     }
 
-    .form__cvc {
-        max-width: 50%;
-    }
 
     button {
         width: 100%;

@@ -162,15 +162,16 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
-.form .form__date {
+.form .form__lowerstr .form__date {
   max-width: 50%;
   display: inline-block;
 }
-.form .form__date input {
+.form .form__lowerstr .form__date input {
   width: 45%;
 }
-.form .form__cvc {
+.form .form__lowerstr .form__cvc {
   max-width: 50%;
 }
 .form button {
