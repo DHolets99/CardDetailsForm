@@ -19,15 +19,14 @@
   </div>
   <div class="context">
     <div class="cards">
-      <div class="cards__card">
+      <div class="cards__card front">
         <div class="cards__card--information">
           <p class="cards__card--number">0000 0000 0000 0000</p>
           <p class="cards__card--name">Jane Appleseed</p>
           <p class="cards__card--date">00/00</p>
         </div>
       </div>
-      <div class="cards__card">
-        <img src=".//images/bg-card-back.png" alt="Card-back" class="cards__card--back">
+      <div class="cards__card back">
         <span class="cards_card--cvc">000</span>
       </div>
     </div>
@@ -39,27 +38,19 @@
         <label>Card Number <br>
           <input type="text" class="" placeholder="e.g. 1234 5678 9123 0000">
         </label>
-        <label class="form--date">Exp. Date (MM/YY) <br>
-          <input type="number" class="" placeholder="MM">
-          <input type="number" class="" placeholder="YY">
-        </label>
-        <label class="form--cvc">CVC <br>
-          <input type="text" class="" placeholder="e.g. 123">
-        </label>
+        <fieldset>
+          <label class="form--date">Exp. Date (MM/YY) <br>
+            <input type="number" class="" placeholder="MM">
+            <input type="number" class="" placeholder="YY">
+          </label>
+          <label class="form--cvc">CVC <br>
+            <input type="text" class="" placeholder="e.g. 123">
+          </label>
+        </fieldset>
+        
         <button>Confirm</button>
       </form>
     </div>
-  </div>
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>
