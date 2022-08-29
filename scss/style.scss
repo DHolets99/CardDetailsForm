@@ -217,16 +217,52 @@ body {
     }
 }
 
-@media screen and (max-width: 420px) {
-    .gradient--desktop {
-        display: none;
-    }
-    .gradient--mobile {
-        display: block;
-        width: 100%;
+@media screen and (max-width: 450px) {
+
+    .gradient {
+        .gradient--desktop {
+            display: none;
+        }
+        .gradient--mobile {
+            display: block;
+            width: 100%;
+        }
     }
 
-    .cards {
-        max-width: 100%;
+    .context {
+        width: 327px;
+        padding: 0;
+        margin: 0 auto;
+        flex-direction: column;
+
+        .cards {
+            width: 343px;
+            height: 251px;
+
+            .cards__card {
+                max-width: 286px;
+                height: 157px;
+                width: 100%;
+            }
+
+            .front {
+                bottom: 0;
+                left: 0;
+            }
+            .back {
+                top: 0;
+                left: 94px;
+            }
+        }
+
+        .form {
+            width: 100%;
+            margin-left: 0;
+
+            fieldset {
+                margin-bottom: 26px;
+            }
+        }
+            
     }
 }
