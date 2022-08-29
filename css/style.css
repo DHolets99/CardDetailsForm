@@ -141,7 +141,7 @@ body {
   border: 1px solid #DFDEE0;
   border-radius: 8px;
 }
-.form fieldset input:hover {
+.form fieldset input:hover, .form fieldset input:focus {
   border: 1px solid #6348FE;
 }
 .form fieldset input::-moz-placeholder {
@@ -156,7 +156,7 @@ body {
 .form fieldset .error {
   border: 1px solid #FF5050;
 }
-.form fieldset .error:hover {
+.form fieldset .error:hover, .form fieldset .error:focus {
   border: 1px solid #6348FE;
 }
 .form fieldset p {

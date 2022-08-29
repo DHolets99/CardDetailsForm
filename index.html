@@ -47,13 +47,13 @@
         <div class="form__lowerstr">
           <fieldset class="form__date">
             <label for="date">Exp. Date (MM/YY)</label>
-            <input type="text" id="date" name="month" placeholder="MM">
-            <input type="text" id="date" name="year" placeholder="YY">
+            <input type="text" inputmode="numeric" id="date" name="month" placeholder="MM">
+            <input type="text" inputmode="numeric" id="date" name="year" placeholder="YY">
             <p></p>
           </fieldset>
           <fieldset class="form__cvc">
             <label for="cvc">CVC</label>
-            <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+            <input type="text" inputmode="numeric" id="cvc" name="cvc" placeholder="e.g. 123">
             <p></p>
           </fieldset>
         </div>        
@@ -63,6 +63,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src=".//js/jquery/validate.js"></script>
 </body>
 </html>
