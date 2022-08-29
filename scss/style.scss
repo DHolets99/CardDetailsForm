@@ -216,3 +216,13 @@ body {
         border-radius: 8px;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .gradient--desktop {
+        display: none;
+    }
+    .gradient--mobile {
+        display: block;
+        width: 100%;
+    }
+}
