@@ -30,13 +30,11 @@ const checkEmptyFields = (event) => {
     })
 }
 
-const maskX = () => {
+
 const maskOptions = {
   mask: '0000 0000 0000 0000'
 };
 let mask = IMask(cardNumber, maskOptions);
-}
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
-cardNumber.addEventListener('input', maskX);
