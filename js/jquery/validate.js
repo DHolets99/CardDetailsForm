@@ -1,6 +1,6 @@
 const inputs = document.querySelectorAll('input');
 const form = document.querySelector('form');
-const cardNumber = document.getElementById('#cadrNumber');
+const cardNumber = document.getElementById('cardNumber');
 
 const addStartFocus = () => {
     inputs[0].focus();
@@ -30,15 +30,13 @@ const checkEmptyFields = (event) => {
     })
 }
 
-$(document).ready(function () {
-
-$('#cardhNumber').mask("0000 0000 0000 0000")
-
-});
-
-
+const maskX = () => {
+const maskOptions = {
+  mask: '0000 0000 0000 0000'
+};
+let mask = IMask(cardNumber, maskOptions);
+}
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
-
-window.addEventListener('load', mask);
+cardNumber.addEventListener('input', maskX);
