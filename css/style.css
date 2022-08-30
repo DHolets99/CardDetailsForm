@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
-.cards .cards__card .cards__card--information .cards__card--number {
+.context .cards .cards__card .cards__card--information .cards__card--number {
   font-size: 28px;
   font-weight: 500;
   line-height: 36px;
@@ -7,7 +7,7 @@
   letter-spacing: 3.4222221375px;
 }
 
-.form fieldset input {
+.context .form fieldset input {
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
@@ -15,7 +15,7 @@
   text-align: left;
 }
 
-.cards .back p, .cards .cards__card .cards__card--information .cards__card--date, .cards .cards__card .cards__card--information .cards__card--name {
+.context .cards .back p, .context .cards .cards__card .cards__card--information .cards__card--date, .context .cards .cards__card .cards__card--information .cards__card--name {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -23,7 +23,7 @@
   text-align: left;
 }
 
-.form fieldset label {
+.context .form fieldset label {
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -31,7 +31,7 @@
   text-align: left;
 }
 
-.form fieldset p {
+.context .form fieldset p {
   font-family: Space Grotesk;
   font-size: 12px;
   font-weight: 500;
@@ -62,75 +62,76 @@ body {
 }
 
 .context {
-  margin: calc((100vh - 527px) / 2) auto;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-}
-
-.cards {
   position: relative;
-  width: 541px;
-  height: 527px;
 }
-.cards .cards__card {
-  max-width: 447px;
-  height: 245px;
-  width: 100%;
+.context .cards {
+  display: block;
+  position: relative;
+  width: 50%;
+  max-width: 541px;
+  height: 60%;
+}
+.context .cards .cards__card {
   color: #FFFFFF;
   position: relative;
 }
-.cards .cards__card img {
+.context .cards .cards__card img {
   width: 100%;
 }
-.cards .cards__card .cards__card--information {
+.context .cards .cards__card .cards__card--information {
   position: absolute;
   bottom: 0;
   margin: auto 32px 27px 32px;
   max-width: 100%;
 }
-.cards .cards__card .cards__card--information .cards__card--name {
+.context .cards .cards__card .cards__card--information .cards__card--name {
   text-transform: uppercase;
   margin-top: 26px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.cards .cards__card .cards__card--information .cards__card--date {
+.context .cards .cards__card .cards__card--information .cards__card--date {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-.cards .front {
+.context .cards .front {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 }
-.cards .back {
+.context .cards .back {
   position: absolute;
   bottom: 0;
-  left: 94px;
+  right: 0;
 }
-.cards .back p {
+.context .cards .back p {
   position: absolute;
   top: 45%;
   right: 12%;
 }
-
-.form {
+.context .form {
   display: block;
-  width: 381px;
-  margin-left: 127px;
+  width: 50%;
+  max-width: 381px;
+  position: relative;
+  margin-left: 10%;
 }
-.form fieldset {
+.context .form fieldset {
   margin-bottom: 26px;
 }
-.form fieldset label {
+.context .form fieldset label {
   width: 100%;
   text-transform: uppercase;
 }
-.form fieldset input {
+.context .form fieldset input {
   box-sizing: border-box;
   width: 100%;
   height: 45px;
@@ -141,46 +142,46 @@ body {
   border: 1px solid #DFDEE0;
   border-radius: 8px;
 }
-.form fieldset input:hover, .form fieldset input:focus {
+.context .form fieldset input:hover, .context .form fieldset input:focus {
   border: 1px solid #6348FE;
 }
-.form fieldset input::-moz-placeholder {
+.context .form fieldset input::-moz-placeholder {
   opacity: 0.25;
 }
-.form fieldset input:-ms-input-placeholder {
+.context .form fieldset input:-ms-input-placeholder {
   opacity: 0.25;
 }
-.form fieldset input::placeholder {
+.context .form fieldset input::placeholder {
   opacity: 0.25;
 }
-.form fieldset .error {
+.context .form fieldset .error {
   border: 1px solid #FF5050;
 }
-.form fieldset .error:hover, .form fieldset .error:focus {
+.context .form fieldset .error:hover, .context .form fieldset .error:focus {
   border: 1px solid #6348FE;
 }
-.form fieldset p {
+.context .form fieldset p {
   margin-top: 8px;
   display: none;
 }
-.form .form__lowerstr {
+.context .form .form__lowerstr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.form .form__lowerstr .form__date {
+.context .form .form__lowerstr .form__date {
   max-width: 50%;
   display: inline-block;
 }
-.form .form__lowerstr .form__date input {
+.context .form .form__lowerstr .form__date input {
   width: 45%;
 }
-.form .form__lowerstr .form__cvc {
+.context .form .form__lowerstr .form__cvc {
   max-width: 50%;
 }
-.form button {
+.context .form button {
   width: 100%;
   background: #21092F;
   color: #FFFFFF;
@@ -189,13 +190,13 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-  .cards .cards__card .cards__card--information .cards__card--number {
+  .context .cards .cards__card .cards__card--information .cards__card--number {
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
     letter-spacing: 2.2000000477px;
   }
-  .cards .cards__card .cards__card--information .cards__card--name, .cards .cards__card .cards__card--information .cards__card--date, .cards .back p {
+  .context .cards .cards__card .cards__card--information .cards__card--name, .context .cards .cards__card .cards__card--information .cards__card--date, .context .cards .back p {
     font-family: Space Grotesk;
     font-size: 9px;
     font-weight: 500;
@@ -211,32 +212,37 @@ body {
     width: 100%;
   }
   .context {
-    width: 327px;
+    height: auto;
+    margin: 24px;
     padding: 0;
-    margin: auto;
-    margin-top: 5vh;
     flex-direction: column;
+    position: relative;
   }
   .context .cards {
-    width: 343px;
-    height: 251px;
-    margin-bottom: 48px;
+    width: 100%;
+    position: relative;
   }
   .context .cards .cards__card {
-    max-width: 286px;
+    width: 80%;
     height: auto;
   }
   .context .cards .cards__card .cards__card--information {
     margin: auto 19px 20px 19px;
   }
+  .context .cards .cards__card .cards__card--information .cards__card--name {
+    margin-top: 17px;
+  }
   .context .cards .front {
-    top: 94px;
+    bottom: 0;
     left: 0;
     z-index: 1;
   }
   .context .cards .back {
     top: 0;
-    left: 57px;
+    left: 10%;
+  }
+  .context .cards .back p {
+    top: 29%;
   }
   .context .form {
     width: 100%;
