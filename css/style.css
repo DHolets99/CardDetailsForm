@@ -189,6 +189,20 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  .cards .cards__card .cards__card--information .cards__card--number {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 2.2000000477px;
+  }
+  .cards .cards__card .cards__card--information .cards__card--name, .cards .cards__card .cards__card--information .cards__card--date, .cards .back p {
+    font-family: Space Grotesk;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 1.2857142687px;
+    text-align: left;
+  }
   .gradient .gradient--desktop {
     display: none;
   }
@@ -211,6 +225,9 @@ body {
   .context .cards .cards__card {
     max-width: 286px;
     height: auto;
+  }
+  .context .cards .cards__card .cards__card--information {
+    margin: auto 19px 20px 19px;
   }
   .context .cards .front {
     top: 94px;

@@ -43,15 +43,6 @@
     color: #FF5050;
 }
 
-%headingXLmob {
-    font-family: Space Grotesk;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 2.200000047683716px;
-    text-align: left;
-}
-
 
 
 $white: #FFFFFF;
@@ -229,6 +220,22 @@ body {
 
 @media screen and (max-width: 450px) {
 
+    %headingXL {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: 2.200000047683716px;
+    }
+
+    %bodyL {
+        font-family: Space Grotesk;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 11px;
+        letter-spacing: 1.2857142686843872px;
+        text-align: left;
+    }
+
     .gradient {
         .gradient--desktop {
             display: none;
@@ -256,21 +263,7 @@ body {
                 height: auto;
 
                 .cards__card--information {
-                    .cards__card--number {
-                        @extend %headingXLmob;
-                    }
-                    .cards__card--name {
-                        @extend %bodyL;
-                        text-transform: uppercase;
-                        margin-top: 26px;
-                        width: fit-content;
-                    }
-                    .cards__card--date {
-                        @extend %bodyL;
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                    }
+                    margin: auto 19px 20px 19px;
                 }
             }
 
