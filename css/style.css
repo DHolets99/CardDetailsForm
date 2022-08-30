@@ -199,31 +199,36 @@ body {
   .context {
     width: 327px;
     padding: 0;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 5vh;
     flex-direction: column;
   }
   .context .cards {
     width: 343px;
     height: 251px;
+    margin-bottom: 48px;
   }
   .context .cards .cards__card {
     max-width: 286px;
-    height: 157px;
-    width: 100%;
+    height: auto;
   }
   .context .cards .front {
-    bottom: 0;
+    top: 94px;
     left: 0;
+    z-index: 1;
   }
   .context .cards .back {
     top: 0;
-    left: 94px;
+    left: 57px;
   }
   .context .form {
     width: 100%;
     margin-left: 0;
   }
   .context .form fieldset {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
+  }
+  .context .form .form__lowerstr {
+    margin-bottom: 8px;
   }
 }

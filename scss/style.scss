@@ -43,6 +43,16 @@
     color: #FF5050;
 }
 
+%headingXLmob {
+    font-family: Space Grotesk;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 2.200000047683716px;
+    text-align: left;
+}
+
+
 
 $white: #FFFFFF;
 $lightGrey: #DFDEE0;
@@ -232,26 +242,46 @@ body {
     .context {
         width: 327px;
         padding: 0;
-        margin: 0 auto;
+        margin: auto;
+        margin-top: 5vh;
         flex-direction: column;
 
         .cards {
             width: 343px;
             height: 251px;
+            margin-bottom: 48px;
 
             .cards__card {
                 max-width: 286px;
-                height: 157px;
-                width: 100%;
+                height: auto;
+
+                .cards__card--information {
+                    .cards__card--number {
+                        @extend %headingXLmob;
+                    }
+                    .cards__card--name {
+                        @extend %bodyL;
+                        text-transform: uppercase;
+                        margin-top: 26px;
+                        width: fit-content;
+                    }
+                    .cards__card--date {
+                        @extend %bodyL;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
             }
 
             .front {
-                bottom: 0;
+                top: 94px;
                 left: 0;
+                z-index: 1;
             }
             .back {
                 top: 0;
-                left: 94px;
+                left: 57px;
             }
         }
 
@@ -260,7 +290,11 @@ body {
             margin-left: 0;
 
             fieldset {
-                margin-bottom: 26px;
+                margin-bottom: 20px;
+            }
+
+            .form__lowerstr {
+                margin-bottom: 8px;
             }
         }
             
