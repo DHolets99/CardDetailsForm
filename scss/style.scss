@@ -98,7 +98,7 @@ body {
                 position: absolute;
                 bottom: 0;
                 margin: auto 32px 27px 32px;
-                max-width: 100%;
+
                 .cards__card--number {
                     @extend %headingXL;
                 }
@@ -288,7 +288,7 @@ body {
             right: 0;
 
             p {
-                top: 29%;
+                top: 20%;
             }
         }
     }

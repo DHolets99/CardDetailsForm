@@ -6,6 +6,35 @@ const month = document.getElementById('date--month');
 const year = document.getElementById('date--year');
 const cvc = document.getElementById('cvc');
 
+
+
+cardHolderNameMask = IMask(cardHolderName, {
+    mask: /^([а-яё\s]+|[a-z\s]+)$/iu,
+    prepare: function (str) {
+        return str.toUpperCase();
+    },
+})
+
+cardNumberMask = IMask(cardNumber, {
+    mask: '0000 0000 0000 0000'
+})
+
+monthMask = IMask(month, {
+    mask: IMask.MaskedRange,
+    from: 01,
+    to: 12,
+    maxLength: 2,
+    autofix: true
+})
+
+yearMask = IMask(year, {
+    mask: '00'
+})
+
+cvcMask = IMask(cvc, {
+    mask: '000'
+})
+
 const addStartFocus = () => {
     inputs[0].focus();
 }
@@ -34,32 +63,26 @@ const checkEmptyFields = (event) => {
     })
 }
 
-const setMasks = () => {
-    cardHolderNameMask = IMask(cardHolderName, {
-        mask: /^([а-яё\s]+|[a-z\s]+)$/iu,
-        prepare: function (str) {
-            return str.toUpperCase();
-        },
-    })
-    cardNumberMask = IMask(cardNumber, {
-        mask: '0000 0000 0000 0000'
-    })
-    monthMask = IMask(month, {
-        mask: IMask.MaskedRange,
-        from: 1,
-        to: 12,
-        maxLength: 2,
-        autofix: true
-    })
-    yearMask = IMask(year, {
-        mask: '00'
-    })
-    cvcMask = IMask(cvc, {
-        mask: '000'
-    })
+const showOnCard = (e) => {
+    let input = e.target;
+    let value = input.value;
+    let className;
+    switch (input.id) {
+        case 'cardHolderName': className = 'cards__card--name';
+        break;
+        case 'cardNumber': className = 'cards__card--number';
+        break;
+        case 'date--month': className = 'cards__card--date';
+        break;
+        case 'cvc': className = 'cards__card--cvc';
+        break;
+    } 
+    
+    let newcl = className;
+    console.log(newcl);
+    document.querySelector(`.${newcl}`).innerHTML = input.value;
 }
-
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
-window.addEventListener('load', setMasks);
+form.addEventListener('input', showOnCard);

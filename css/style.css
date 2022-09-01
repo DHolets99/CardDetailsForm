@@ -87,7 +87,6 @@ body {
   position: absolute;
   bottom: 0;
   margin: auto 32px 27px 32px;
-  max-width: 100%;
 }
 .context .cards .cards__card .cards__card--information .cards__card--name {
   text-transform: uppercase;
@@ -244,7 +243,7 @@ body {
     right: 0;
   }
   .context .cards .back p {
-    top: 29%;
+    top: 20%;
   }
   .context .form {
     width: 100%;
