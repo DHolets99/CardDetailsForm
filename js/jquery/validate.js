@@ -39,11 +39,6 @@ const addStartFocus = () => {
     inputs[0].focus();
 }
 
-const checkValidity = (e) => {
-    let input = e.target;
-    console.log(input);
-}
-
 const checkEmptyFields = (event) => {
     event.preventDefault();
 
@@ -65,7 +60,6 @@ const checkEmptyFields = (event) => {
 
 const showOnCard = (e) => {
     let input = e.target;
-    let value = input.value;
     let className;
     switch (input.id) {
         case 'cardHolderName': className = 'cards__card--name';
@@ -77,10 +71,8 @@ const showOnCard = (e) => {
         case 'cvc': className = 'cards__card--cvc';
         break;
     } 
-    
-    let newcl = className;
-    console.log(newcl);
-    document.querySelector(`.${newcl}`).innerHTML = input.value;
+  
+    document.querySelector(`.${className}`).innerHTML = input.value;
 }
 
 window.addEventListener('load', addStartFocus);

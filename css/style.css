@@ -15,7 +15,7 @@
   text-align: left;
 }
 
-.context .cards .back p, .context .cards .cards__card .cards__card--information .cards__card--date, .context .cards .cards__card .cards__card--information .cards__card--name {
+.context .cards .back p, .context .cards .cards__card .cards__card--information .name-date .cards__card--date, .context .cards .cards__card .cards__card--information .name-date .cards__card--name {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -79,6 +79,10 @@ body {
 .context .cards .cards__card {
   color: #FFFFFF;
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 447px;
 }
 .context .cards .cards__card img {
   width: 100%;
@@ -86,19 +90,21 @@ body {
 .context .cards .cards__card .cards__card--information {
   position: absolute;
   bottom: 0;
+  box-sizing: content-box;
+  width: 100%;
+}
+.context .cards .cards__card .cards__card--information .cards__card--number {
+  margin-left: 32px;
+}
+.context .cards .cards__card .cards__card--information .name-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin: auto 32px 27px 32px;
 }
-.context .cards .cards__card .cards__card--information .cards__card--name {
+.context .cards .cards__card .cards__card--information .name-date .cards__card--name {
   text-transform: uppercase;
   margin-top: 26px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.context .cards .cards__card .cards__card--information .cards__card--date {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 .context .cards .front {
   position: absolute;
@@ -195,7 +201,7 @@ body {
     line-height: 23px;
     letter-spacing: 2.2000000477px;
   }
-  .context .cards .cards__card .cards__card--information .cards__card--name, .context .cards .cards__card .cards__card--information .cards__card--date, .context .cards .back p {
+  .context .cards .cards__card .cards__card--information .name-date .cards__card--name, .context .cards .cards__card .cards__card--information .name-date .cards__card--date, .context .cards .back p {
     font-family: Space Grotesk;
     font-size: 9px;
     font-weight: 500;

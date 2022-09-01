@@ -89,6 +89,9 @@ body {
         .cards__card {
             color: $white;
             position: relative;
+            height: fit-content;
+            max-width: 447px;
+            
     
             img {
                 width: 100%;
@@ -97,22 +100,28 @@ body {
             .cards__card--information {
                 position: absolute;
                 bottom: 0;
-                margin: auto 32px 27px 32px;
+                box-sizing: content-box;
+                width: 100%;
 
                 .cards__card--number {
                     @extend %headingXL;
+                    margin-left: 32px;
                 }
-                .cards__card--name {
-                    @extend %bodyL;
-                    text-transform: uppercase;
-                    margin-top: 26px;
-                    width: fit-content;
-                }
-                .cards__card--date {
-                    @extend %bodyL;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
+
+                .name-date{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin: auto 32px 27px 32px;
+
+                    .cards__card--name {
+                        @extend %bodyL;
+                        text-transform: uppercase;
+                        margin-top: 26px;
+                    }
+                    .cards__card--date {
+                        @extend %bodyL;
+                    }
                 }
             }
         }
