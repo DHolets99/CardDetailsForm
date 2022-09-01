@@ -225,84 +225,88 @@ body {
 
 @media screen and (max-width: 450px) {
 
-    %headingXL {
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 23px;
-        letter-spacing: 2.200000047683716px;
-    }
+%headingXL {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 2.200000047683716px;
+}
 
-    %bodyL {
-        font-family: Space Grotesk;
-        font-size: 9px;
-        font-weight: 500;
-        line-height: 11px;
-        letter-spacing: 1.2857142686843872px;
-        text-align: left;
-    }
+%bodyL {
+    font-family: Space Grotesk;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 1.2857142686843872px;
+    text-align: left;
+}
 
-    .gradient {
-        .gradient--desktop {
-            display: none;
-        }
-        .gradient--mobile {
-            display: block;
-            width: 100%;
-        }
+.gradient {
+    .gradient--desktop {
+        display: none;
     }
+    .gradient--mobile {
+        display: block;
+        width: 100%;
+    }
+}
 
-    .context {
-        height: auto;
-        margin: 24px;
-        padding: 0;
-        flex-direction: column;
+.context {
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 24px;
+
+    .cards {
+        width: 100%;
         position: relative;
+        height: 40%;
+        max-width: none;
 
-        .cards {
-            width: 100%;
-            position: relative;
+        .cards__card {
+            min-width: 286px;
+            width: 80%;
 
-            .cards__card {
-                width: 80%;
-                height: auto;
+            .cards__card--information {
+                margin: auto 19px 20px 19px;
 
-                .cards__card--information {
-                    margin: auto 19px 20px 19px;
-
-                    .cards__card--name {
-                        margin-top: 17px;
-                    }
-                }
-            }
-
-            .front {
-                bottom: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            .back {
-                top: 0;
-                left: 10%;
-
-                p {
-                    top: 29%;
+                .cards__card--name {
+                    margin-top: 17px;
                 }
             }
         }
 
-        .form {
-            width: 100%;
-            margin-left: 0;
+        .front {
+            bottom: 0;
+            top: auto;
+            z-index: 1;
+        }
 
-            fieldset {
-                margin-bottom: 20px;
-            }
+        .back {
+            top: 0;
+            left: auto;
+            right: 0;
 
-            .form__lowerstr {
-                margin-bottom: 8px;
+            p {
+                top: 29%;
             }
         }
-            
     }
+
+    .form {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+
+        fieldset {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form__lowerstr {
+            margin-bottom: 8px;
+        }
+    }
+        
+}
 }

@@ -212,19 +212,20 @@ body {
     width: 100%;
   }
   .context {
-    height: auto;
-    margin: 24px;
-    padding: 0;
+    box-sizing: border-box;
     flex-direction: column;
-    position: relative;
+    justify-content: space-around;
+    padding: 24px;
   }
   .context .cards {
     width: 100%;
     position: relative;
+    height: 40%;
+    max-width: none;
   }
   .context .cards .cards__card {
+    min-width: 286px;
     width: 80%;
-    height: auto;
   }
   .context .cards .cards__card .cards__card--information {
     margin: auto 19px 20px 19px;
@@ -234,22 +235,25 @@ body {
   }
   .context .cards .front {
     bottom: 0;
-    left: 0;
+    top: auto;
     z-index: 1;
   }
   .context .cards .back {
     top: 0;
-    left: 10%;
+    left: auto;
+    right: 0;
   }
   .context .cards .back p {
     top: 29%;
   }
   .context .form {
     width: 100%;
+    max-width: none;
     margin-left: 0;
   }
   .context .form fieldset {
     margin-bottom: 20px;
+    position: relative;
   }
   .context .form .form__lowerstr {
     margin-bottom: 8px;
