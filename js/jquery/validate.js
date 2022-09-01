@@ -88,6 +88,7 @@ const deleteMessage = (currentInput) => {
 
 const toggleFocus = (currentInput) => {
     console.log ('test');
+    
 }
 
 window.addEventListener('load', addStartFocus);
