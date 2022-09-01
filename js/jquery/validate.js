@@ -44,24 +44,31 @@ const checkEmptyFields = (event) => {
 
     inputs.forEach( (e) => {
 
-        let message = e.parentNode.querySelector('p');
+        let errorMessage = e.parentNode.querySelector('p');
 
         e.nextElementSibling.innerHTML = "Can’t be blank";
 
         if (e.value == '') {
             e.classList.add('error');
-            message.style.display = "block";
+            errorMessage.style.display = "block";
         } else {
             e.classList.remove('error');
-            message.style.display = "none";
+            errorMessage.style.display = "none";
         };
     })
 }
 
-const showOnCard = (e) => {
-    let input = e.target;
+const validate = (e) => {
+    let currentInput = e.target;
+
+    showOnCard(currentInput);
+    deleteMessage(currentInput);
+    toggleFocus(currentInput);
+}
+
+const showOnCard = (currentInput) => {
     let className;
-    switch (input.id) {
+    switch (currentInput.id) {
         case 'cardHolderName': className = 'cards__card--name';
         break;
         case 'cardNumber': className = 'cards__card--number';
@@ -72,9 +79,17 @@ const showOnCard = (e) => {
         break;
     } 
   
-    document.querySelector(`.${className}`).innerHTML = input.value;
+    document.querySelector(`.${className}`).innerHTML = currentInput.value;
+}
+
+const deleteMessage = (currentInput) => {
+    currentInput.parentNode.querySelector('p').style.display = "none";
+}
+
+const toggleFocus = (currentInput) => {
+    console.log ('test');
 }
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
-form.addEventListener('input', showOnCard);
+form.addEventListener('input', validate);
