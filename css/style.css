@@ -208,7 +208,10 @@ body {
     line-height: 11px;
     letter-spacing: 1.2857142687px;
     text-align: left;
-  }
+  Ъ
+  .context .cards .cards__card .cards__card--information .cards__card--number {
+    margin-left: 0;
+}
   .gradient .gradient--desktop {
     display: none;
   }
