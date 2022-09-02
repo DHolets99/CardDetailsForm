@@ -16,7 +16,9 @@ cardHolderNameMask = IMask(cardHolderName, {
 })
 
 cardNumberMask = IMask(cardNumber, {
-    mask: '0000 0000 0000 0000'
+    mask: '0000 0000 0000 0000',
+    minLength: 16,
+    maxLength: 19
 })
 
 monthMask = IMask(month, {
@@ -72,6 +74,11 @@ const showOnCard = (currentInput) => {
         case 'cardHolderName': className = 'cards__card--name';
         break;
         case 'cardNumber': className = 'cards__card--number';
+                           const minLength = 16,
+                                 maxLength = 19;
+                           if (currentInput >= minLength && currentInput <= maxLength) {
+                               toggleFocus(currentInput);
+                           };
         break;
         case 'date--month': className = 'cards__card--date';
         break;
@@ -87,8 +94,8 @@ const deleteMessage = (currentInput) => {
 }
 
 const toggleFocus = (currentInput) => {
-    console.log ('test');
-    
+        currentInput.blur();
+        currentInput.nextSibling.focus();
 }
 
 window.addEventListener('load', addStartFocus);
