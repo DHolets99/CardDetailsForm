@@ -76,7 +76,7 @@ const showOnCard = (currentInput) => {
         case 'cardNumber': className = 'cards__card--number';
                            const minLength = 16,
                                  maxLength = 19;
-                           if (currentInput >= minLength && currentInput <= maxLength) {
+                           if (currentInput.lenght >= minLength && currentInput.lenght <= maxLength) {
                                toggleFocus(currentInput);
                            };
         break;
@@ -95,7 +95,7 @@ const deleteMessage = (currentInput) => {
 
 const toggleFocus = (currentInput) => {
         currentInput.blur();
-        currentInput.nextSibling.focus();
+        currentInput.nextChild.focus();
 }
 
 window.addEventListener('load', addStartFocus);
