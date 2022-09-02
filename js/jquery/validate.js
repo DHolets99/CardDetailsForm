@@ -75,8 +75,8 @@ const showOnCard = (currentInput) => {
         case 'cardNumber': className = 'cards__card--number';
                            const minLength = 16,
                                  maxLength = 19;
-                           if (currentInput.lenght >= minLength && currentInput.lenght <= maxLength) {
-                               console.log (currentInput.lenght);
+                           if (currentInput.value.lenght >= minLength && currentInput.value.lenght <= maxLength) {
+                               console.log (currentInput.value.lenght);
                                toggleFocus(currentInput);
                            };
         break;
