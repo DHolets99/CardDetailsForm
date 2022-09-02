@@ -235,6 +235,9 @@ body {
   .context .cards .cards__card .cards__card--information {
     margin: auto 19px 20px 19px;
   }
+  .context .cards .cards__card .cards__card--information .name-date {
+    margin: 0;
+  }
   .context .cards .cards__card .cards__card--information .cards__card--name {
     margin-top: 17px;
   }
