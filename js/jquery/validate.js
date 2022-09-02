@@ -77,7 +77,8 @@ const showOnCard = (currentInput) => {
                            const minLength = 16,
                                  maxLength = 19;
                            if (currentInput.lenght >= minLength && currentInput.lenght <= maxLength) {
-                               toggleFocus(currentInput);
+                               console.log (currentInput.lenght);
+                               //toggleFocus(currentInput);
                            };
         break;
         case 'date--month': className = 'cards__card--date';
