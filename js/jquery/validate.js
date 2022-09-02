@@ -63,6 +63,7 @@ const validate = (e) => {
 
     showOnCard(currentInput);
     deleteMessage(currentInput);
+	toggleFocus(currentInput);
 }
 
 const showOnCard = (currentInput) => {
