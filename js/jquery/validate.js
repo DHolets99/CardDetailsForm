@@ -65,7 +65,6 @@ const validate = (e) => {
 
     showOnCard(currentInput);
     deleteMessage(currentInput);
-    toggleFocus(currentInput);
 }
 
 const showOnCard = (currentInput) => {
@@ -78,7 +77,7 @@ const showOnCard = (currentInput) => {
                                  maxLength = 19;
                            if (currentInput.lenght >= minLength && currentInput.lenght <= maxLength) {
                                console.log (currentInput.lenght);
-                               //toggleFocus(currentInput);
+                               toggleFocus(currentInput);
                            };
         break;
         case 'date--month': className = 'cards__card--date';
