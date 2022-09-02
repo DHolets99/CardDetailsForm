@@ -211,10 +211,10 @@ body {
   }
   .context .cards .cards__card .cards__card--information {
     width: auto;
-}
+  }
   .context .cards .cards__card .cards__card--information .cards__card--number {
     margin-left: 0;
-}
+  }
   .gradient .gradient--desktop {
     display: none;
   }
