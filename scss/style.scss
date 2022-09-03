@@ -231,11 +231,66 @@ body {
 }
 
 @media screen and (max-width: 920px) {
+    .gradient {
+        .gradient--desktop {
+            display: none;
+        }
+        .gradient--mobile {
+            display: block;
+            width: 100%;
+        }
+    }
 
+    .context {
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 100px;
+    
+        .cards {
+            width: 100%;
+            max-width: 710px;
+            height: 40%;
+            display: block;
+            position: relative;
+    
+            .front {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                background-size: 100%;
+    
+            }
+    
+            .back {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-size: 100%;
+            }
+        }
+    
+        .form {
+            width: 100%;
+            max-width: none;
+            margin-left: 0;
+    
+            fieldset {
+                margin-bottom: 20px;
+                position: relative;
+            }
+    
+            .form__lowerstr {
+                margin-bottom: 8px;
+            }
+        }
+            
+    }
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 
 %headingXL {
     font-size: 18px;
@@ -259,19 +314,16 @@ body {
     }
     .gradient--mobile {
         display: block;
-        width: 100%;
+        height: 20%;
     }
 }
 
 .context {
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 24px;
+    padding: 20px 40px;
 
     .cards {
         width: 100%;
-        height: 30%;
+        height: 40%;
         display: block;
         position: relative;
 
@@ -333,6 +385,8 @@ body {
 
 @media screen and (max-width: 380px) {
     .context {
+        padding: 16px;
+
         .cards {
             height: 40%;
         }
