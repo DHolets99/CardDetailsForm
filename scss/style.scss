@@ -135,18 +135,19 @@ body {
         .back {
             background: url('/images/bg-card-back.png');
             align-self: flex-end;
+            position: relative;
             p {
                 @extend %bodyL;
                 position: absolute;
                 top: 45%;
-                right: 12%;
+                right: 10%;
             }
         }
     }
     
     
     .form {
-        display: none;
+        display: block;
         width: 50%;
         max-width: 381px;
         position: relative;
@@ -230,11 +231,8 @@ body {
     }
 
     .thks__post {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        display: none;
+        text-align: center;
         margin-left: 10%;
 
         img {
@@ -244,12 +242,14 @@ body {
         h1 {
             @extend %headingXL;
             margin-bottom: 16px;
+            text-align: center;
         }
 
         p {
             @extend %headingL;
             color: #8F8694;
             margin-bottom: 48px;
+            text-align: center;
         }
 
         button {

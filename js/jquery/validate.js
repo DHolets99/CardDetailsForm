@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll('input');
-const form = document.querySelector('form');
+const form = document.querySelector('.form');
+const thnks = document.querySelector('.thks__post');
 const cardHolderName = document.getElementById('cardHolderName');
 const cardNumber = document.getElementById('cardNumber');
 const month = document.getElementById('date--month');
@@ -40,6 +41,15 @@ const addStartFocus = () => {
     inputs[0].focus();
 }
 
+const sendForm = (e) => {
+    console.log (e);
+    if (e == false) {
+        
+        form.style.display = 'none';
+        thnks.style.display = 'block';
+    }
+};
+
 const checkEmptyFields = (event) => {
     event.preventDefault();
 
@@ -53,14 +63,14 @@ const checkEmptyFields = (event) => {
             e.classList.add('error');
             errorMessage.style.display = "block";
         } else {
-            if (e['#date--month'] == '' || e['#date--year'] == '') {
-                e.classList.add('error');
-                errorMessage.style.display = "block";
-            }
             e.classList.remove('error');
             errorMessage.style.display = "none";
         };
     })
+
+    if (inputs[0].value != '' && inputs[1].value != '' && inputs[2].value != '' && inputs[3].value != '' && inputs[4].value != '') {
+        sendForm(false);
+    }
 }
 
 const validate = (e) => {

@@ -115,14 +115,15 @@ body {
 .context .cards .back {
   background: url("/images/bg-card-back.png");
   align-self: flex-end;
+  position: relative;
 }
 .context .cards .back p {
   position: absolute;
   top: 45%;
-  right: 12%;
+  right: 10%;
 }
 .context .form {
-  display: none;
+  display: block;
   width: 50%;
   max-width: 381px;
   position: relative;
@@ -194,11 +195,8 @@ body {
   border: none;
 }
 .context .thks__post {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
+  text-align: center;
   margin-left: 10%;
 }
 .context .thks__post img {
@@ -206,10 +204,12 @@ body {
 }
 .context .thks__post h1 {
   margin-bottom: 16px;
+  text-align: center;
 }
 .context .thks__post p {
   color: #8F8694;
   margin-bottom: 48px;
+  text-align: center;
 }
 .context .thks__post button {
   width: 100%;
