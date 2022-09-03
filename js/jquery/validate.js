@@ -87,12 +87,13 @@ const deleteMessage = (currentInput) => {
 }
 
 const toggleFocus = (currentInput) => {
-							const minLength = 16,
-                                  maxLength = 19;
-                           if (currentInput.value.lenght >= minLength && currentInput.value.lenght <= maxLength) {
-                               currentInput.blur();
-        						currentInput.nextChild.focus();
-                           };
+    let value = currentInput.value;
+    const minLength = 16,
+            maxLength = 19;
+    if (currentInput.value.lenght >= minLength && currentInput.value.lenght <= maxLength) {
+        currentInput.blur();
+        currentInput.nextChild.focus();
+    };
       
 }
 
