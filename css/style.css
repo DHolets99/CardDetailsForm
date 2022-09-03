@@ -78,14 +78,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .context .cards .cards__card {
+  display: block;
   color: #FFFFFF;
   max-width: 447px;
   width: 100%;
   max-height: 245px;
   height: 100%;
-  position: relative;
 }
 .context .cards .cards__card .cards__card--information {
   padding: 27px 32px;
@@ -223,32 +224,38 @@ body {
   }
   .context .cards {
     width: 100%;
+    height: 30%;
+    display: block;
     position: relative;
-    height: 40%;
-    max-width: none;
   }
   .context .cards .cards__card {
-    min-width: 286px;
-    width: 80%;
+    width: 286px;
+    height: 157px;
   }
   .context .cards .cards__card .cards__card--information {
-    margin: auto 19px 20px 19px;
+    padding: 20px 19px;
   }
-  .context .cards .cards__card .cards__card--information .cards__card--name {
-    margin-top: 17px;
+  .context .cards .cards__card .cards__card--information img {
+    width: 54px;
+  }
+  .context .cards .cards__card .cards__card--information .cards__card--number {
+    margin-top: 34px;
+  }
+  .context .cards .cards__card .cards__card--information .cards__card--lowerstr {
+    margin-top: 0;
   }
   .context .cards .front {
+    position: absolute;
     bottom: 0;
-    top: auto;
+    left: 0;
     z-index: 1;
+    background-size: 100%;
   }
   .context .cards .back {
+    position: absolute;
     top: 0;
-    left: auto;
     right: 0;
-  }
-  .context .cards .back p {
-    top: 20%;
+    background-size: 100%;
   }
   .context .form {
     width: 100%;
@@ -261,5 +268,10 @@ body {
   }
   .context .form .form__lowerstr {
     margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .context .cards {
+    height: 40%;
   }
 }
