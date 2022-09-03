@@ -103,12 +103,14 @@ body {
                 .cards__card--number {
                     @extend %headingXL;
                     margin-top: 64px;
+                    height: 36px;
                 }
 
                 .cards__card--lowerstr {
                     margin-top: 26px;
                     display: flex;
                     justify-content: space-between;
+                    height: 18px;
 
                     .cards__card--date {
                         display: inline-block;
