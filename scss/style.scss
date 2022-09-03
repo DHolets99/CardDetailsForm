@@ -318,6 +318,10 @@ body {
                 margin-bottom: 8px;
             }
         }
+
+        .thks__post {
+            margin-left: 0;
+        }
             
     }
 }
@@ -412,22 +416,17 @@ body {
             margin-bottom: 8px;
         }
     }
-
-    .thks__post {
-        margin-left: 0;
-    }
+}
 }
 
 @media screen and (max-width: 380px) {
+
     .context {
+
         padding: 16px;
 
         .cards {
             height: 40%;
-        }
-
-        .thks__post {
-            margin-left: 0;
         }
     }
 }

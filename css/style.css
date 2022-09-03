@@ -266,6 +266,9 @@ body {
   .context .form .form__lowerstr {
     margin-bottom: 8px;
   }
+  .context .thks__post {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 550px) {
   .context .cards .cards__card .cards__card--information .cards__card--number, .context .thks__post h1 {
