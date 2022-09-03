@@ -5,6 +5,7 @@ const cardNumber = document.getElementById('cardNumber');
 const month = document.getElementById('date--month');
 const year = document.getElementById('date--year');
 const cvc = document.getElementById('cvc');
+const brandLogo = document.querySelector('brandLogo');
 
 
 
@@ -63,7 +64,6 @@ const validate = (e) => {
 
     showOnCard(currentInput);
     deleteMessage(currentInput);
-	toggleFocus(currentInput);
 }
 
 const showOnCard = (currentInput) => {
@@ -86,17 +86,21 @@ const deleteMessage = (currentInput) => {
     currentInput.parentNode.querySelector('p').style.display = "none";
 }
 
-const toggleFocus = (currentInput) => {
-    let value = currentInput.value;
-    const minLength = 16,
-            maxLength = 19;
-    if (currentInput.value.lenght >= minLength && currentInput.value.lenght <= maxLength) {
-        currentInput.blur();
-        currentInput.nextChild.focus();
+const checkCorrectValue = () => {
+
+    let errorMessage = cardNumber.parentNode.querySelector('p');
+    cardNumber.nextElementSibling.innerHTML = "Wrong format";
+
+    if (cardNumber.value.length < 16 && cardNumber.value.length > 0) {
+        cardNumber.classList.add('error');
+        errorMessage.style.display = "block";
+    } else {
+        cardNumber.classList.remove('error');
+        errorMessage.style.display = "none";
     };
-      
 }
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
 form.addEventListener('input', validate);
+cardNumber.addEventListener('blur', checkCorrectValue);
