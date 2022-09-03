@@ -101,6 +101,10 @@ body {
             .cards__card--information {
                 padding: 27px 32px;
 
+                .cards__card--name {
+                    text-transform: uppercase;
+                }
+
                 .cards__card--number {
                     @extend %headingXL;
                     margin-top: 64px;
@@ -181,7 +185,6 @@ body {
         
                 &::placeholder {
                     opacity: 0.25;
-                    text-transform: uppercase;
                 }
             }
     
