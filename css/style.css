@@ -152,12 +152,15 @@ body {
 }
 .context .form fieldset input::-moz-placeholder {
   opacity: 0.25;
+  text-transform: uppercase;
 }
 .context .form fieldset input:-ms-input-placeholder {
   opacity: 0.25;
+  text-transform: uppercase;
 }
 .context .form fieldset input::placeholder {
   opacity: 0.25;
+  text-transform: uppercase;
 }
 .context .form fieldset .error {
   border: 1px solid #FF5050;
