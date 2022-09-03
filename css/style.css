@@ -112,6 +112,7 @@ body {
   align-self: flex-start;
 }
 .context .cards .back {
+  background: url("/images/bg-card-back.png");
   align-self: flex-end;
 }
 .context .cards .back p {

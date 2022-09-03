@@ -68,6 +68,7 @@ const validate = (e) => {
 
     showOnCard(currentInput);
     deleteMessage(currentInput);
+    checkCorrectValue(currentInput);
 }
 
 const showOnCard = (currentInput) => {
@@ -92,21 +93,57 @@ const deleteMessage = (currentInput) => {
     currentInput.parentNode.querySelector('p').style.display = "none";
 }
 
-const checkCorrectValue = () => {
+const checkCorrectValue = (currentInput) => {
 
-    let errorMessage = cardNumber.parentNode.querySelector('p');
-    cardNumber.nextElementSibling.innerHTML = "Wrong format";
+    let errorMessage = currentInput.parentNode.querySelector('p');
+    currentInput.nextElementSibling.innerHTML = "Wrong format";
 
-    if (cardNumber.value.length < 16 && cardNumber.value.length > 0) {
-        cardNumber.classList.add('error');
-        errorMessage.style.display = "block";
-    } else {
-        cardNumber.classList.remove('error');
-        errorMessage.style.display = "none";
-    };
+    switch (currentInput.id) {
+        case 'cardNumber': cardNumber.addEventListener('blur', function () {
+                            if (cardNumber.value.length < 16 && cardNumber.value.length > 0) {
+                                cardNumber.classList.add('error');
+                                errorMessage.style.display = "block";
+                            } else {
+                                cardNumber.classList.remove('error');
+                                errorMessage.style.display = "none";
+                            };  
+        })                          
+        break;
+        case 'date--month': month.addEventListener('blur', function () {
+                            if (month.value.length < 2 && month.value.length > 0) {
+                                month.classList.add('error');
+                                errorMessage.style.display = "block";
+                            } else {
+                                month.classList.remove('error');
+                                errorMessage.style.display = "none";
+                            };
+        })
+        break;
+        case 'date--year': year.addEventListener('blur', function () {
+                            if (year.value.length < 2 && year.value.length > 0) {
+                                year.classList.add('error');
+                                errorMessage.style.display = "block";
+                            } else {
+                                year.classList.remove('error');
+                                errorMessage.style.display = "none";
+                            };
+        })             
+        break;
+        case 'cvc': cvc.addEventListener('blur', function () {
+                            if (cvc.value.length < 3 && cvc.value.length > 0) {
+                                cvc.classList.add('error');
+                                errorMessage.style.display = "block";
+                            } else {
+                                cvc.classList.remove('error');
+                                errorMessage.style.display = "none";
+                            };
+        })
+        break;
+    } 
+
+   
 }
 
 window.addEventListener('load', addStartFocus);
 form.addEventListener('submit', checkEmptyFields);
 form.addEventListener('input', validate);
-cardNumber.addEventListener('blur', checkCorrectValue);

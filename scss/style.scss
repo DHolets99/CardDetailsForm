@@ -132,6 +132,7 @@ body {
         }
 
         .back {
+            background: url('/images/bg-card-back.png');
             align-self: flex-end;
             p {
                 @extend %bodyL;
