@@ -110,6 +110,7 @@ body {
                     margin-top: 26px;
                     display: flex;
                     justify-content: space-between;
+                    flex-wrap: wrap;
                     height: 18px;
 
                     .cards__card--date {

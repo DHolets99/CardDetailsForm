@@ -53,6 +53,10 @@ const checkEmptyFields = (event) => {
             e.classList.add('error');
             errorMessage.style.display = "block";
         } else {
+            if (e['#date--month'] == '' || e['#date--year'] == '') {
+                e.classList.add('error');
+                errorMessage.style.display = "block";
+            }
             e.classList.remove('error');
             errorMessage.style.display = "none";
         };
@@ -73,7 +77,9 @@ const showOnCard = (currentInput) => {
         break;
         case 'cardNumber': className = 'cards__card--number';            
         break;
-        case 'date--month': className = 'cards__card--date';
+        case 'date--month': className = 'cards__card--month';
+        break;
+        case 'date--year': className = 'cards__card--year';
         break;
         case 'cvc': className = 'cards__card--cvc';
         break;

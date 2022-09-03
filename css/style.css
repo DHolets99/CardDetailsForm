@@ -98,6 +98,7 @@ body {
   margin-top: 26px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 18px;
 }
 .context .cards .cards__card .cards__card--information .cards__card--lowerstr .cards__card--date {
