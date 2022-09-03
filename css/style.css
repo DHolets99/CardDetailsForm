@@ -109,11 +109,11 @@ body {
   display: inline-block;
 }
 .context .cards .front {
-  background: url("/images/bg-card-front.png");
+  background: url("../images/bg-card-front.png");
   align-self: flex-start;
 }
 .context .cards .back {
-  background: url("/images/bg-card-back.png");
+  background: url("../images/bg-card-back.png");
   align-self: flex-end;
   position: relative;
 }
